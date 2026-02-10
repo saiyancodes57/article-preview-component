@@ -82,7 +82,7 @@ main {
 .drawers {
   width: 100%;
   height: auto;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .content {
@@ -90,7 +90,7 @@ main {
 }
 
 .paragraph {
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   font-size: 13px;
   line-height: 1.4;
   list-style: 0.12%;
@@ -101,6 +101,7 @@ main {
 footer {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .avatar {
@@ -133,6 +134,37 @@ footer {
   border-radius: 50%;
   border: none;
   background-color: var(--color-grey-200);
+  anchor-name: --share-btn;
+}
+
+/* Popover Styles */
+#popover-content {
+  background-color: var(--color-grey-900);
+  position-anchor: --share-btn;
+  margin: 0;
+  inset: auto;
+  bottom: calc(anchor(top) + 10px);
+  right: calc(anchor(right) - 10vw);
+}
+
+#popover-content > img {
+  width: 20px;
+  height: 20px;
+}
+
+#popover-content:popover-open {
+  display: flex;
+  border: none;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  border-radius: 0.625rem;
+}
+
+.share {
+  font-size: 13px;
+  line-height: 1.4;
+  letter-spacing: 5px;
+  color: var(--color-grey-200);
 }
 
 @media (min-width: 768px) {
